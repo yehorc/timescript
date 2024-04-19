@@ -10,20 +10,20 @@ D	    1-31	            Day of month
 DD	    01-31	            Day of month, 2-digits
 */
 
-export function formatDate (format: string, date: Date): string {
-  const tokenMap: Record<string, string> = {
-    YYYY: date.getFullYear().toString(),
-    YY: date.getFullYear().toString().slice(-2),
-    MMM: date.toLocaleString('default', { month: 'short' }),
-    MM: (date.getMonth() + 1).toString().padStart(2, '0'),
-    DD: date.getDate().toString().padStart(2, '0'),
-    D: date.getDate().toString()
-  }
+export function formatDate(format: string, date: Date): string {
+    const tokenMap: Record<string, string> = {
+        YYYY: date.getFullYear().toString(),
+        YY: date.getFullYear().toString().slice(-2),
+        MMM: date.toLocaleString('default', {month: 'short'}),
+        MM: (date.getMonth() + 1).toString().padStart(2, '0'),
+        DD: date.getDate().toString().padStart(2, '0'),
+        D: date.getDate().toString()
+    }
 
-  let formattedDate = format
-  for (const token in tokenMap) {
-    formattedDate = formattedDate.replace(token, tokenMap[token])
-  }
+    let formattedDate = format
+    for (const token in tokenMap) {
+        formattedDate = formattedDate.replace(token, tokenMap[token])
+    }
 
-  return formattedDate
+    return formattedDate
 }
