@@ -28,7 +28,7 @@ jobs:
                 node-version: 20
 
             - name: 'Install Dependencies'
-              run: npm ci
+              run: npm --registry=https://registry.npmjs.org/ ci
 
             - name: 'Run tests'
-              run: npm test
+              run: npm --registry=https://registry.npmjs.org/ test
