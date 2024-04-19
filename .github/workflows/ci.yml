@@ -23,7 +23,7 @@ jobs:
               name: 'Checkout repository'
 
             - name: 'Install Dependencies'
-              run: npm ci
+              run: npm ci --registry=https://registry.npmjs.org/
 
             - name: 'Run tests'
-              run: npm test
+              run: npm test --registry=https://registry.npmjs.org/
