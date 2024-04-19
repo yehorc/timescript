@@ -12,6 +12,8 @@ D	      1-31	              Day of month
 DD	    01-31	              Day of month, 2-digits
 */
 
+// Dummy commit #1
+
 export function formatDate (format: string, date: Date = new Date()): string {
   if (!/^(YY|YYYY|MMM|MM|DD|D)(-(YY|YYYY|MMM|MM|DD|D))*$/.test(format)) {
     throw new Error("Invalid format string. Use YY, YYYY, MMM, MM, DD, D seperated by '-'")
